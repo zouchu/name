@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+ul, li {
+  list-style: none; }
+
+.color {
+  background: #66AFE9; }
+
+.drop {
+  display: none; }
+
+header {
+  width: 100%;
+  height: 130px;
+  margin-top: 5px;
+  background: #FCFCFC url(../../image/bgn1.jpg) no-repeat;
+  background-size: cover; }
+  header .music {
+    margin-left: 20px;
+    opacity: 0.6; }
+  header .navbar {
+    margin-top: 10px;
+    background: #26c9c4;
+    height: 60px; }
+    header .navbar .nav_div .nav > li > a {
+      padding: 19px 25px;
+      font-size: 16px; }
+    header .navbar .nav_div .form {
+      line-height: 45px; }
+    header .navbar .nav_div .navbar-toggle {
+      margin-top: 12px; }
+  header .classify li {
+    height: 40px; }
+    header .classify li a {
+      padding: 10px 25px; }
+  header .classify hr {
+    margin: 0; }
+
+.dropdown-menu li a {
+  color: red; }
+
+/*# sourceMappingURL=pc.css.map */
