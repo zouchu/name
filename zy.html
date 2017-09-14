@@ -86,9 +86,10 @@
 				border-radius: 15px;
 				text-align: center;
 			}
-			section{
+			.container-fluid{
 				height: 100%;
 				width: 100%;
+				padding: 0;
 				overflow-y: auto;
 			}
 			.sec_uls{
@@ -105,9 +106,7 @@
 			.sec_uls>li>img{
 				max-width: 100%;
 			}
-			.modal-backdrop{
-				
-			}
+			
 		</style>
 	</head>
 
@@ -154,6 +153,7 @@
 		var app = angular.module("myApp",[]);
 		app.controller('myCon',function($http,$scope){
 			$scope.img = [
+				{"pac":"images/p0.jpg"},
 				{"pac":"images/p1.jpg"},
 				{"pac":"images/p2.jpg"},
 				{"pac":"images/p3.jpg"},
