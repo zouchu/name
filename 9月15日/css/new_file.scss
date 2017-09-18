@@ -1,0 +1,85 @@
+$sc:50;
+html{
+                height: 100%;
+            }
+            body{
+                height: 100%;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            p,h4{
+                margin: 0;
+                padding: 0;
+            }
+            header{
+                width: 100%;
+                height: 40px;
+                background: aqua;
+                line-height: 40px;
+                text-align: center;
+                position: fixed;    
+                top: 0;
+            }
+            section{
+                width: 100%;
+                height: 100%;
+            }
+            ul{
+                overflow-y: auto;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+            }
+            li{
+                height: 80px;
+                position: relative;
+                box-sizing: border-box;
+                padding: 0 20px;
+                border-bottom: 1px solid cadetblue;
+            }
+            img{
+                max-width: 50px;
+                margin-top: 20px;
+                position: absolute;
+                top: 0;
+            }
+            h4{
+                padding-left: 70px;
+                padding-top: 10px;
+            }
+            p{
+                padding-left: 70px;
+                
+            }
+            span{
+                position: absolute;
+                right: 20px;
+                top: 30px;
+            }
+            footer{
+                margin: 0;
+                width: 100%;
+                height: 40px;
+                background: aqua;
+                line-height: 40px;
+                text-align: center;
+                position: fixed;    
+                bottom: 0;
+            }
+            .slh{
+                overflow: hidden;
+                text-overflow: ellipsis;    
+                white-space: nowrap;
+                padding-right: 50px;
+            }
+            .iconfont{
+                color: red;
+              font-family:"iconfont" !important;
+              font-size:36px;font-style:normal;
+              -webkit-font-smoothing: antialiased;
+              -webkit-text-stroke-width: 0.2px;
+              -moz-osx-font-smoothing: grayscale;
+            }

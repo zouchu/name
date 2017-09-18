@@ -1,0 +1,27 @@
+
+$sc:50;
+html{
+    height: 100%;
+    body{
+        
+        width: 100%;
+        margin: 0;
+        height: 100%;
+    }
+}
+.logo{
+    width: 308/$sc+rem;
+    height: 304/$sc+rem;
+    padding-top:338/$sc+rem ;
+    padding-left: 212/$sc+rem;
+}
+h4{
+    margin: 0;
+    color: #343434;
+    padding-left: 260/$sc+rem;
+}
+.img{
+    width: 354/$sc+rem;
+    height: 37/$sc+rem;
+    padding-left: 190/$sc+rem;
+}

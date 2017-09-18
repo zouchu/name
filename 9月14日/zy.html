@@ -4,6 +4,9 @@
  		<meta charset="UTF-8">
  		<title></title>
  		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+ 		<script type="text/javascript">
+ 			document.documentElement.style.fontSize = innerWidth/15+"px";
+ 		</script>
  		<link rel="stylesheet" type="text/css" href="css/font.css" />
  		<link rel="stylesheet" type="text/css" href="plur-in/bootstrap.min.css" />
  		<style>
@@ -161,7 +164,13 @@
 				{"pac":"images/p8.jpg"},
 				{"pac":"images/p9.jpg"}
  			]
- 		
+ 			//外部数据 的引用方法
+// 		app.controller('myCon',function($http,$scope){
+//         $http.get('js/shuju.json').success(function(data){
+//               $scope.data=data;
+//               console.log(data);
+//         })
+//   	})
  			
  			
       })

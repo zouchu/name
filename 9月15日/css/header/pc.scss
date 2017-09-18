@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style: none;
+}
+.color{
+    background: #66AFE9;
+}
+.drop{
+    display: none;
+}
+header{
+        width: 100%;
+        height: 130px;
+        margin-top: 5px ;
+        background: #FCFCFC url(../../image/bgn1.jpg) no-repeat;
+        background-size: cover;
+        .music{
+            margin-left: 20px;
+            opacity: 0.6;
+        }
+        .navbar{
+            margin-top: 10px;
+            background: #26c9c4;
+            height: 60px;
+            .nav_div{
+                .nav>li>a{
+                        padding: 19px 25px;
+                        font-size: 16px;
+                }    
+                .form{
+                    line-height: 45px;
+                }
+                .navbar-toggle{
+                    margin-top: 12px;
+                }
+            }
+        }
+    .classify{
+        li{
+            height: 40px;
+            a{
+                padding: 10px 25px;
+            }
+        }
+        hr{
+            margin:0;
+        }
+    }
+
+
+}
+
+.dropdown-menu{
+    li{
+        a{
+            color: red;
+        }
+    }
+  
+}
