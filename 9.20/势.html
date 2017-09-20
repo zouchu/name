@@ -56,8 +56,8 @@
 			})
 			his.on("pinchout",function(){
 				sc+=0.03;
-				if(sc<3){
-					sc=3
+				if(sc>3){
+					sc=3;
 				}
 				box.style.transform = "scale("+sc+")"
 				//加前缀
