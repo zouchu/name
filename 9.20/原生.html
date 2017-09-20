@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<style type="text/css">
+			body{
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100%;
+				height: 300px;
+				position: relative;
+				overflow: hidden;
+			}
+			.uls{
+				list-style: none;
+				width: 400%;
+				height: 300px;
+				position: absolute;
+				padding: 0;
+				margin: 0;
+			}
+			li{
+				float: left;
+				width: 25%;
+				height: 300px;
+			}
+			li:nth-child(1){
+				background: red;
+			}
+			li:nth-child(2){
+				background: blue;
+			}
+			li:nth-child(3){
+				background: yellow;
+			}
+			li:nth-child(4){
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul class="uls">
+				<li>111</li>
+				<li>222</li>
+				<li>333</li>
+				<li>444</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var uls = document.querySelector(".uls");
+			var lis = document.querySelectorAll("li")
+			function getStyle(obj,arr){
+				return getComputedStyle(obj,null)[arr]
+			}
+			var w = parseInt(getStyle(lis[0],"width"))
+			console.log(w)
+			uls.addEventListener("touchstart",function(ev){
+				ev.preventDefault();
+				var ex = ev.changedTouches[0].pageX;
+				console.log(ex)
+				var left = uls.offsetLeft;
+				uls.addEventListener("touchmove",function(ev){
+					var dis = ev.changedTouches[0].pageX-ex;
+					uls.style.left = dis+left+"px";
+					console.log(dis)
+				});
+				uls.addEventListener("touchend",function(){
+					var a = Math.round(uls.offsetLeft/w);
+					console.log(a,w)
+					if(-a ==lis.length){
+						a=1-lis.length
+					}
+					if(a>0){
+						a=0
+					}
+					uls.style.left = a*w+"px"
+				})
+			})
+		</script>
+	</body>
+</html>
