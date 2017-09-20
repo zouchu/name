@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<style type="text/css">
+			.box{
+				width: 200px;
+				height: 200px;
+				background: #CCC;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<script type="text/javascript">
+			var box= document.querySelector(".box")
+			console.log(box)
+			
+			//开始触摸时发生的事件
+			box.addEventListener("touchstart",function(){
+				console.log(1)
+			})
+			//触摸移动时发生的事件
+			box.addEventListener("touchmove",function(){
+				console.log(2)
+			})
+			//触发结束后发生的事件
+			box.addEventListener("touchend",function(){
+				console.log(3)
+			})
+			
+			
+			
+			
+			
+			
+			//
+			box.addEventListener("touchstart",function(e){
+				box.innerHTML = e.touches.length;
+			})
+			box.addEventListener("touchmove",function(e){
+				box.innerHTML = e.targetTouches.length;
+			})
+			box.addEventListener("touchend",function(e){
+				box.innerHTML = e.changedTouches[0].pageX;
+			})
+		</script>
+		
+	</body>
+</html>
