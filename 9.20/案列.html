@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100%;
+				height: 300px;
+			}
+			ul{
+				width: 400%;
+				padding: 0;
+				list-style: none;
+				transition: all 1s;
+			}
+			li{
+				float: left;
+				width: 25%;
+				height: 300px;
+			}
+			li:nth-child(1){
+				background: red;
+			}
+			li:nth-child(2){
+				background: blue;
+			}
+			li:nth-child(3){
+				background: gold;
+			}
+			li:nth-child(4){
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul class="uls">
+				<li>111</li>
+				<li>222</li>
+				<li>333</li>
+				<li>444</li>
+			</ul>
+		</div>
+		<script src="js/hammer.js"></script>
+		<script type="text/javascript">
+			var box = document.querySelector(".box")
+			var uls = document.querySelector(".uls")
+			var lis = document.querySelectorAll("li")
+			//第一步阻止事件默认行为
+			box.addEventListener("touchstart",function(ev){
+				ev.preventDefault()
+			})
+			
+			var n =0;
+			var his = new Hammer(uls);
+			flag = true;
+			his.on("panleft",function(e){
+				if(flag){
+					n++;
+					console.log(n)
+					if(n>=lis.length-1){
+						n=lis.length-1
+					}
+					uls.style.transform = "translateX(-"+(n*25)+"%"+")"
+					flag = false;
+				}
+			})
+			his.on("panright",function(e){
+				if(flag){
+					n--;
+					console.log(n)
+					if(n<=0){
+						n = 0
+					}
+					uls.style.transform = "translateX(-"+(n*25)+"%"+")"
+					flag = false;
+				}
+			})
+			uls.addEventListener("touchend",function(){
+				flag =true
+			})
+		</script>
+	</body>
+</html>
