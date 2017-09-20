@@ -36,14 +36,17 @@
 			
 			
 			
-			//
+			//当屏幕上所有触摸点的集合列表    
 			box.addEventListener("touchstart",function(e){
+				//监测屏幕上的有几个触摸点
 				box.innerHTML = e.touches.length;
 			})
 			box.addEventListener("touchmove",function(e){
+				//监测目标上有几个触摸点
 				box.innerHTML = e.targetTouches.length;
 			})
 			box.addEventListener("touchend",function(e){
+				//监测触发点的位置
 				box.innerHTML = e.changedTouches[0].pageX;
 			})
 		</script>
