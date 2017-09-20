@@ -58,10 +58,11 @@
 			function getStyle(obj,arr){
 				return getComputedStyle(obj,null)[arr]
 			}
+			//获取li自身的一个宽度
 			var w = parseInt(getStyle(lis[0],"width"))
-			console.log(w)
 			uls.addEventListener("touchstart",function(ev){
 				ev.preventDefault();
+				//获取鼠标按下是位置的坐标
 				var ex = ev.changedTouches[0].pageX;
 				console.log(ex)
 				var left = uls.offsetLeft;
