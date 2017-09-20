@@ -24,13 +24,13 @@
 		<script type="text/javascript">
 			var box = document.querySelector(".box");
 		//防止点透用 阻止冒泡方法
-			box.addEventListener("touchstart",function(ev){
+//			box.addEventListener("touchstart",function(ev){
 				//阻止事件冒泡
-				ev.preventDefault()
-			})
-			box.addEventListener("touchend",function(ev){
+//				ev.preventDefault()
+//			})
+//			box.addEventListener("touchend",function(ev){
 //				this.style.display = "none"
-			})
+//			})
 		//手势识别
 			//1、引入hammer.js文件
 			//2,
@@ -40,10 +40,10 @@
 			
 		//左右滑动
 			his.on("panleft",function(){
-				console.log("left")
+				box.innerHTML = "left"
 			})
 			his.on("panright",function(){
-				console.log("right")
+				box.innerHTML = "right"
 			})
 		//放大
 		var sc = 1;
@@ -60,6 +60,9 @@
 					sc=3
 				}
 				box.style.transform = "scale("+sc+")"
+				//加前缀
+//				box.style.wekitTransform = "scale("+sc+")"
+				
 			})
 		
 		
