@@ -54,6 +54,9 @@
 		</div>
 		<script type="text/javascript">
 			$(function(){
+				$(".box").on("touchstart",function(ev){
+					ev.preventDefault();
+				})
 				var n = 0;
 				$(".box").on("swipeLeft",function(){
 					n++;
