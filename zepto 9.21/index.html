@@ -54,7 +54,7 @@
 		</div>
 		<script type="text/javascript">
 			$(function(){
-				$(".box").on("touchstart",function(ev){
+				document.addEventListener("touchstart",function(ev){
 					ev.preventDefault();
 				})
 				var n = 0;
@@ -63,14 +63,14 @@
 					if(n>=$("p").length){
 						n=$("p").length-1;
 					}
-					$(this).css("webkitTransform","translateX(-"+n*100+"%)")
+					$(this).css("transform","translateX(-"+n*100+"%)")
 				})
 				$(".box").on("swipeRight",function(){
 					n--;
 					if(n<0){
 						n=0;
 					}
-					$(this).css("webkitTransform","translateX(-"+n*100+"%)")
+					$(this).css("transform","translateX(-"+n*100+"%)")
 				})
 				
 			})
