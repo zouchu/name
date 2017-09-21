@@ -1,0 +1,26 @@
+var app = angular.module("myApp",["ui.router","myModule"]);
+app.config(function($stateProvider,$urlRouterProvider){
+	 $urlRouterProvider.otherwise('/two');
+	 $stateProvider
+	 .state({
+	 	name:'one',
+		url:"/one",
+		templateUrl:"./html/header.html"
+	 })
+	 .state({
+	 	name:'two',
+	 	url:'/two',
+	 	templateUrl:"./html/nav.html"
+	 })
+	 .state({
+	 	name:'three',
+	 	url:'/three',
+	 	templateUrl:"./html/section.html"
+	 })
+	 .state({
+	 	name:'foue',
+	 	url:'/four',
+	 	templateUrl:"./html/footer.html",
+	 	controller:'myCon'
+	 })
+})

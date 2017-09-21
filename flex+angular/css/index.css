@@ -1,0 +1,30 @@
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+html {
+  height: 100%; }
+  html body {
+    height: 100%;
+    margin: 0; }
+    html body .box footer {
+      width: 100%;
+      background: #0086B3;
+      position: fixed;
+      bottom: 0; }
+      html body .box footer .foot_uls {
+        display: flex; }
+        html body .box footer .foot_uls li {
+          flex: 1;
+          height: 50px; }
+          html body .box footer .foot_uls li a {
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 50px;
+            color: #fff;
+            text-align: center; }
+
+/*# sourceMappingURL=index.css.map */
